@@ -8,32 +8,23 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            margin-bottom: 20px;
         }
         .sala {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            margin-bottom: 40px;
         }
-        .fileira {
-            display: flex;
-            justify-content: center;
-            margin: 5px 0;
-        }
-        .assento {
-            width: 40px;
-            height: 40px;
+        .banco {
+            width: 50px;
+            height: 50px;
             margin: 5px;
-            border-radius: 5px;
             cursor: pointer;
+            border: 1px solid #000;
+            border-radius: 5px;
         }
         .livre {
             background-color: green;
@@ -41,66 +32,51 @@
         .ocupado {
             background-color: red;
         }
-        .setor {
-            border: 2px solid red;
-            padding: 10px;
-            margin: 20px 0;
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
+        .corredor {
+            width: 20px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 0 10px;
         }
-        .galeria {
+        .fileira {
             display: flex;
             flex-direction: column;
-            align-items: center;
-        }
-        .corredor {
-            height: 20px; /* Espaço do corredor */
         }
     </style>
 </head>
 <body>
 
-<h1>Lugares Igreja</h1>
-
-<!-- Setor Direita -->
 <div class="sala">
-    <div class="setor">DIREITA</div>
     <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
     </div>
-    <!-- Repetir para 9 fileiras -->
-    <!-- Exemplo de fileira 1 -->
+    
+    <div class="corredor"></div>
+    
     <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
     </div>
-    <!-- Adicione mais fileiras conforme necessário -->
-    <!-- Total de 9 fileiras -->
-    <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-    </div>
-    <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-    </div>
-    <div class="fileira">
-       
+</div>
+
+<script>
+    function toggleLugar(element) {
+        if (element.classList.contains('livre')) {
+            element.classList.remove('livre');
+            element.classList.add('ocupado');
+        } else {
+            element.classList.remove('ocupado');
+            element.classList.add('livre');
+        }
+    }
+</script>
+
+</body>
+</html>
