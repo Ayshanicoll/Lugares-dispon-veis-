@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Cinema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .sala {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .fileira {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+        }
+        .assento {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .livre {
+            background-color: green;
+        }
+        .ocupado {
+            background-color: red;
+        }
+        .numeracao {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Controle de Assentos - Sala de Cinema</h1>
+<div class="sala">
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <div class="numeracao">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <div class="numeracao">
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+    </div>
+
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <div class="numeracao">
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+    </div>
+
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <div class="numeracao">
+        <span>13</span>
+        <span>14</span>
+        <span>15</span>
+        <span>16</span>
+    </div>
+</div>
+
+<script>
+    function toggleAssento(assento) {
+        if (assento.classList.contains('livre')) {
+            assento.classList.remove('livre');
+            assento.classList.add('ocupado');
+        } else {
+            assento.classList.remove('ocupado');
+            assento.classList.add('livre');
+        }
+    }
+</script>
+
+</body>
+  </html>
