@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares Igreja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .sala {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .fileira {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+        }
+        .assento {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .livre {
+            background-color: green;
+        }
+        .ocupado {
+            background-color: red;
+        }
+        .numeracao {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+        }
+        .setor {
+            border: 2px solid red;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .galeria {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Lugares Igreja</h1>
+
+<div class="sala">
+    <div class="setor">DIREITA</div>
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <!-- Repetir para 9 fileiras -->
+    <!-- Exemplo de fileira 1 -->
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <!-- Adicione mais fileiras conforme necessário -->
+</div>
+
+<div class="sala">
+    <div class="setor">CORREDOR</div>
+    <div style="height: 20px;"></div> <!-- Espaço do corredor -->
+</div>
+
+<div class="sala">
+    <div class="setor">ESQUERDA</div>
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+    </div>
+    <!-- Repetir para 9 fileiras -->
+    <!-- Exemplo de fileira 1 -->
+    <div class="fileira">
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <div class="assento livre" onclick="toggleAssento(this)"></div>
+        <
