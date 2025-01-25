@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Cinema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .sala {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .fileira {
+            display: flex;
+            justify-content: center;
+            margin: 5px 0;
+        }
+        .banco {
+            width: 40px;
+            height: 40px;
+            margin: 3px;
+            cursor: pointer;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        .livre {
+            background-color: green;
+        }
+        .ocupado {
+            background-color: red;
+        }
+        .corredor {
+            width: 20px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sala">
+    <!-- Fileiras superiores do T -->
+    <div class="fileira">
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+                <div class="banco livre" onclick="toggleLugar(this)"></div>
+    </div>
+    <div class="fileira">
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+                <div class="banco livre" onclick="toggleLugar(this)"></div>
+    </div>
+
+    <div class="fileira">
+        <div class="corredor"></div>
+    </div>
+
+    <!-- Fileiras do lado esquerdo do T -->
+    <div class="fileira">
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="corredor"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></div>
+        <div class="banco livre" onclick="toggleLugar(this)"></
