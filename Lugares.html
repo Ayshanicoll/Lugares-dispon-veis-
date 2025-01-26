@@ -1,124 +1,335 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quadrados Interativos</title>
+<title>BANCOS DISPONÍVEIS IGREJA</title>
 <style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 20px 0;
 }
-
-.grupo {
-    display: flex;
-    justify-content: center; /* Centraliza os quadrados J */
+th, td {
+border: 1px solid #000;
+padding: 8px;
+text-align: center;
 }
-
-.quadrado {
-    width: 80px; /* Tamanho fixo */
-    height: 80px; /* Tamanho fixo */
-    background-color: green;
-    display: inline-block;
-    text-align: center;
-    line-height: 80px; /* Alinha o texto verticalmente */
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
+th {
+background-color: #f2f2f2;
 }
-
-.inferior {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+td.preenchido {
+background-color: green;
+cursor: pointer;
 }
-
-.esquerda, .direita {
-    display: flex;
-}
-
-.separador {
-    width: 20px; /* Largura do separador */
-    height: 200px; /* Altura do separador */
-    background-color: gray; /* Cor do separador */
-}
-
-.quadrado-cinza {
-    width: 80px; /* Tamanho do novo quadrado cinza igual aos outros */
-    height: 80px; /* Tamanho do novo quadrado cinza igual aos outros */
-    background-color: gray; /* Cor inicial do quadrado cinza */
-    display: inline-block;
-    text-align: center;
-    line-height: 80px; /* Alinha o texto verticalmente */
-    color: white; /* Cor do texto */
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.quadrado:hover {
-    transform: scale(1.05); /* Adiciona um efeito de hover para realçar os quadrados */
+td.selecionado {
+background-color: red;
 }
 </style>
 </head>
 <body>
-<div class="topo">
-    <div class="grupo">
-        <div class="quadrado" onclick="toggleColor(this)">J1</div>
-        <div class="quadrado" onclick="toggleColor(this)">J2</div>
-        <div class="quadrado" onclick="toggleColor(this)">J3</div>
-        <div class="quadrado" onclick="toggleColor(this)">J4</div>
-        <div class="quadrado" onclick="toggleColor(this)">J5</div>
-        <div class="quadrado" onclick="toggleColor(this)">J6</div>
-        <div class="quadrado" onclick="toggleColor(this)">J7</div>
-        <div class="quadrado" onclick="toggleColor(this)">J8</div>
-        <div class="quadrado" onclick="toggleColor(this)">J9</div>
-        <div class="quadrado" onclick="toggleColor(this)">J10</div>
-        <div class="quadrado" onclick="toggleColor(this)">J11</div> <!-- Novo quadrado -->
-        <div class="quadrado" onclick="toggleColor(this)">J12</div> <!-- Novo quadrado -->
-        <div class="quadrado" onclick="toggleColor(this)">J13</div> <!-- Novo quadrado -->
-        <div class="quadrado" onclick="toggleColor(this)">J14</div> <!-- Novo quadrado -->
-        <div class="quadrado" onclick="toggleColor(this)">J15</div> <!-- Novo quadrado -->
-        <div class="quadrado" onclick="toggleColor(this)">J16</div> <!-- Novo quadrado -->
-    </div>
-</div>
-<div class="inferior">
-   <div class="esquerda">
-       <div class="quadrado" onclick="toggleColor(this)">A1</div>
-       <div class="quadrado" onclick="toggleColor(this)">A2</div>
-       <div class="quadrado" onclick="toggleColor(this)">A3</div>
-       <div class="quadrado" onclick="toggleColor(this)">A4</div>
-       <div class="quadrado" onclick="toggleColor(this)">A5</div>
-       <div class="quadrado" onclick="toggleColor(this)">A6</div>
-       <div class="quadrado" onclick="toggleColor(this)">A7</div> <!-- Mover A7 aqui -->
-   </div>
-
-   <div class="separador"></div> <!-- Separador cinza -->
-   
-   <div class="direita">
-       <div class="quadrado-cinza"></div> <!-- Novo quadrado cinza -->
-       <div class="quadrado" onclick="toggleColor(this)">A8</div>
-       <div class="quadrado" onclick="toggleColor(this)">A9</div>
-       <div class="quadrado" onclick="toggleColor(this)">A10</div>
-       <div class="quadrado" onclick="toggleColor(this)">A11</div>
-       <div class="quadrado" onclick="toggleColor(this)">A12</div>
-   </div>
-</div>
-
+<h2>Tabela 15x15</h2>
+<table>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+</tr>
+<tr>
+<th>1</th>
+<td class="preenchido">L1</td>
+<td class="preenchido">L2</td>
+<td class="preenchido">L3</td>
+<td class="preenchido">L4</td>
+<td class="preenchido">L5</td>
+<td class="preenchido">L6</td>
+<td class="preenchido">L7</td>
+<td class="preenchido">L8</td>
+<td class="preenchido">L9</td>
+<td class="preenchido">L10</td>
+<td class="preenchido">L11</td>
+<td class="preenchido">L12</td>
+<td class="preenchido">L13</td>
+<td class="preenchido">L14</td>
+<td class="preenchido">L15</td>
+<td class="preenchido">L16</td>
+</tr>
+<tr>
+<th>*</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>2</th>
+<td></td>
+<td class="preenchido">a1</td>
+<td class="preenchido">a2</td>
+<td class="preenchido">a3</td>
+<td class="preenchido">a4</td>
+<td class="preenchido">a5</td>
+<td class="preenchido">a6</td>
+<td class="preenchido">a7</td>
+<td></td>
+<td class="preenchido">a8</td>
+<td class="preenchido">a9</td>
+<td class="preenchido">a10</td>
+<td class="preenchido">a11</td>
+<td class="preenchido">a12</td>
+<td class="preenchido">a13</td>
+<td></td>
+</tr>
+<tr>
+<th>3</th>
+<td></td>
+<td class="preenchido">b1</td>
+<td class="preenchido">b2</td>
+<td class="preenchido">b3</td>
+<td class="preenchido">b4</td>
+<td class="preenchido">b5</td>
+<td class="preenchido">b6</td>
+<td class="preenchido">b7</td>
+<td></td>
+<td class="preenchido">b8</td>
+<td class="preenchido">b9</td>
+<td class="preenchido">b10</td>
+<td class="preenchido">b11</td>
+<td class="preenchido">b12</td>
+<td class="preenchido">b13</td>
+<td></td>
+</tr>
+<tr>
+<th>4</th>
+<td></td>
+<td class="preenchido">c1</td>
+<td class="preenchido">c2</td>
+<td class="preenchido">c3</td>
+<td class="preenchido">c4</td>
+<td class="preenchido">c5</td>
+<td class="preenchido">c6</td>
+<td class="preenchido">c7</td>
+<td></td>
+<td class="preenchido">c8</td>
+<td class="preenchido">c9</td>
+<td class="preenchido">c10</td>
+<td class="preenchido">c11</td>
+<td class="preenchido">c12</td>
+<td class="preenchido">c13</td>
+<td></td>
+</tr>
+<tr>
+<th>5</th>
+<td></td>
+<td class="preenchido">d1</td>
+<td class="preenchido">d2</td>
+<td class="preenchido">d3</td>
+<td class="preenchido">d4</td>
+<td class="preenchido">d5</td>
+<td class="preenchido">d6</td>
+<td class="preenchido">d7</td>
+<td></td>
+<td class="preenchido">d8</td>
+<td class="preenchido">d9</td>
+<td class="preenchido">d10</td>
+<td class="preenchido">d11</td>
+<td class="preenchido">d12</td>
+<td class="preenchido">d13</td>
+<td></td>
+</tr>
+<tr>
+<th>6</th>
+<td></td>
+<td class="preenchido">e1</td>
+<td class="preenchido">e2</td>
+<td class="preenchido">e3</td>
+<td class="preenchido">e4</td>
+<td class="preenchido">e5</td>
+<td class="preenchido">e6</td>
+<td class="preenchido">e7</td>
+<td></td>
+<td class="preenchido">e8</td>
+<td class="preenchido">e9</td>
+<td class="preenchido">e10</td>
+<td class="preenchido">e11</td>
+<td class="preenchido">e12</td>
+<td class="preenchido">e13</td>
+<td></td>
+</tr>
+<tr>
+<th>7</th>
+<td></td>
+<td class="preenchido">f1</td>
+<td class="preenchido">f2</td>
+<td class="preenchido">f3</td>
+<td class="preenchido">f4</td>
+<td class="preenchido">f5</td>
+<td class="preenchido">f6</td>
+<td class="preenchido">f7</td>
+<td></td>
+<td class="preenchido">f8</td>
+<td class="preenchido">f9</td>
+<td class="preenchido">f10</td>
+<td class="preenchido">f11</td>
+<td class="preenchido">f12</td>
+<td class="preenchido">f13</td>
+<td></td>
+</tr>
+<tr>
+<th>8</th>
+<td></td>
+<td class="preenchido">g1</td>
+<td class="preenchido">g2</td>
+<td class="preenchido">g3</td>
+<td class="preenchido">g4</td>
+<td class="preenchido">g5</td>
+<td class="preenchido">g6</td>
+<td class="preenchido">g7</td>
+<td></td>
+<td class="preenchido">g8</td>
+<td class="preenchido">g9</td>
+<td class="preenchido">g10</td>
+<td class="preenchido">g11</td>
+<td class="preenchido">g12</td>
+<td class="preenchido">g13</td>
+<td></td>
+</tr>
+<tr>
+<th>9</th>
+<td></td>
+<td class="preenchido">h1</td>
+<td class="preenchido">h2</td>
+<td class="preenchido">h3</td>
+<td class="preenchido">h4</td>
+<td class="preenchido">h5</td>
+<td class="preenchido">h6</td>
+<td class="preenchido">h7</td>
+<td></td>
+<td class="preenchido">h8</td>
+<td class="preenchido">h9</td>
+<td class="preenchido">h10</td>
+<td class="preenchido">h11</td>
+<td class="preenchido">h12</td>
+<td class="preenchido">h13</td>
+<td></td>
+</tr>
+<tr>
+<th>10</th>
+<td></td>
+<td class="preenchido">i1</td>
+<td class="preenchido">i2</td>
+<td class="preenchido">i3</td>
+<td class="preenchido">i4</td>
+<td class="preenchido">i5</td>
+<td class="preenchido">i6</td>
+<td class="preenchido">i7</td>
+<td></td>
+<td class="preenchido">i8</td>
+<td class="preenchido">i9</td>
+<td class="preenchido">i10</td>
+<td class="preenchido">i11</td>
+<td class="preenchido">i12</td>
+<td class="preenchido">i13</td>
+<td></td>
+</tr>
+<tr>
+<th>11</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="preenchido">j9</td>
+<td class="preenchido">j10</td>
+<td class="preenchido">j11</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>*</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>12</th>
+<td class="preenchido">k1</td>
+<td class="preenchido">k2</td>
+<td class="preenchido">k3</td>
+<td class="preenchido">k4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td class="preenchido">k13</td>
+<td class="preenchido">k14</td>
+<td class="preenchido">k15</td>
+<td class="preenchido">k16</td>
+</tr>
+</table>
 <script>
-function toggleColor(element) {
-   if (element.style.backgroundColor === 'red') {
-       element.style.backgroundColor = 'green';
-   } else {
-       element.style.backgroundColor = 'red';
-   }
-}
-</script>
+const tdPreenchidos = document.querySelectorAll('td.preenchido');
 
+tdPreenchidos.forEach((td) => {
+td.addEventListener('click', () => {
+if (td.classList.contains('selecionado')) {
+td.classList.remove('selecionado');
+} else {
+td.classList.add('selecionado');
+}
+});
+});
+</script>
 </body>
-</html>
+</html
+
+    
