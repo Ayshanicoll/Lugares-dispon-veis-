@@ -1,123 +1,134 @@
+Claro! Vamos colocar o quadrado "A13" ao lado do "A12" na linha inferior. Vou fazer essa alteração para você.
+
+Aqui está a versão atualizada do código:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala de Cinema</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        .sala {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .fileira {
-            display: flex;
-            justify-content: center;
-            margin: 5px 0;
-        }
-        .assento {
-            width: 40px;
-            height: 40px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .livre {
-            background-color: green;
-        }
-        .ocupado {
-            background-color: red;
-        }
-        .numeracao {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 300px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadrados Interativos</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.grupo {
+    display: flex;
+    justify-content: center; /* Centraliza os quadrados J */
+}
+
+.quadrado {
+    width: 80px; /* Tamanho fixo */
+    height: 80px; /* Tamanho fixo */
+    background-color: green;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px; /* Alinha o texto verticalmente */
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inferior {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.esquerda, .direita {
+    display: flex;
+}
+
+.separador {
+    width: 20px; /* Largura do separador */
+    height: 200px; /* Altura do separador */
+    background-color: gray; /* Cor do separador */
+}
+
+.quadrado-cinza {
+    width: 80px; /* Tamanho do novo quadrado cinza igual aos outros */
+    height: 80px; /* Tamanho do novo quadrado cinza igual aos outros */
+    background-color: gray; /* Cor inicial do quadrado cinza */
+    display: inline-block;
+    text-align: center;
+    line-height: 80px; /* Alinha o texto verticalmente */
+    color: white; /* Cor do texto */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quadrado:hover {
+    transform: scale(1.05); /* Adiciona um efeito de hover para realçar os quadrados */
+}
+</style>
 </head>
 <body>
-
-<h1>Controle de Assentos - Sala de Cinema</h1>
-<div class="sala">
-    <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-    </div>
-    <div class="numeracao">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span> 
-    </div>
-    
-    <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-    </div>
-    <div class="numeracao">
-        <span>5</span>
-        <span>6</span>
-        <span>7</span>
-        <span>8</span>
-    </div>
-
-    <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-    </div>
-    <div class="numeracao">
-        <span>9</span>
-        <span>10</span>
-        <span>11</span>
-        <span>12</span>
-    </div>
-
-    <div class="fileira">
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-        <div class="assento livre" onclick="toggleAssento(this)"></div>
-    </div>
-    <div class="numeracao">
-        <span>13</span>
-        <span>14</span>
-        <span>15</span>
-        <span>16</span>
+<div class="topo">
+    <div class="grupo">
+        <div class="quadrado" onclick="toggleColor(this)">J1</div>
+        <div class="quadrado" onclick="toggleColor(this)">J2</div>
+        <div class="quadrado" onclick="toggleColor(this)">J3</div>
+        <div class="quadrado" onclick="toggleColor(this)">J4</div>
+        <div class="quadrado" onclick="toggleColor(this)">J5</div>
+        <div class="quadrado" onclick="toggleColor(this)">J6</div>
+        <div class="quadrado" onclick="toggleColor(this)">J7</div>
+        <div class="quadrado" onclick="toggleColor(this)">J8</div>
+        <div class="quadrado" onclick="toggleColor(this)">J9</div>
+        <div class="quadrado" onclick="toggleColor(this)">J10</div>
+        <div class="quadrado" onclick="toggleColor(this)">J11</div>
+        <div class="quadrado" onclick="toggleColor(this)">J12</div>
+        <div class="quadrado" onclick="toggleColor(this)">J13</div>
+        <div class="quadrado" onclick="toggleColor(this)">J14</div>
+        <div class="quadrado" onclick="toggleColor(this)">J15</div>
+        <div class="quadrado" onclick="toggleColor(this)">J16</div> <!-- Novos quadrados J -->
     </div>
 </div>
+<div class="inferior">
+   <div class="esquerda">
+       <div class="quadrado" onclick="toggleColor(this)">A1</div>
+       <div class="quadrado" onclick="toggleColor(this)">A2</div>
+       <div class="quadrado" onclick="toggleColor(this)">A3</div>
+       <div class="quadrado" onclick="toggleColor(this)">A4</div>
+       <div class="quadrado" onclick="toggleColor(this)">A5</div>
+       <div class="quadrado" onclick="toggleColor(this)">A6</div>
+       <div class="quadrado" onclick="toggleColor(this)">A7</div> <!-- Novo A -->
+   </ div >
+
+   < div class= "separador"></ div > <!-- Separador cinza -->
+
+   < div class= "direita">
+       < div class= "quadrado-cinza"></ div > <!-- Novo quadrado cinza -->
+       < div class= "quadrado" onclick= "toggleColor (this)" > A8 </ div >
+       < div class= "quadrado" onclick= "toggleColor (this)" > A9 </ div >
+       < div class= "quadrado" onclick= "toggleColor (this)" > A10 </ div >
+       < div class= "quadrado" onclick= "toggleColor (this)" > A11 </ div >
+       < div class= "quadrado" onclick= "toggleColor (this)" > A12 </ div >
+       < div class= "quadrado" onclick= "toggleColor (this)" > A13 </ div >
+       <!-- Novo A ao lado do A12 -->
+   </ div >
+ </ div >
 
 <script>
-    function toggleAssento(assento) {
-        if (assento.classList.contains('livre')) {
-            assento.classList.remove('livre');
-            assento.classList.add('ocupado');
-        } else {
-            assento.classList.remove('ocupado');
-            assento.classList.add('livre');
-        }
-    }
+function toggleColor(element) {
+   if (element.style.backgroundColor === 'red') {
+       element.style.backgroundColor = 'green';
+   } else {
+       element.style.backgroundColor = 'red';
+   }
+}
 </script>
 
 </body>
-  </html>
+</html>
+
+```
+
+Agora o quadradinho "A13" está posicionado ao lado do quadradinho "A12". Se precisar de mais ajustes ou ajuda, é só me avisar! 😊
